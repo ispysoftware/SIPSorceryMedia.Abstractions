@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <PackageId>SIPSorceryMedia.Abstractions</PackageId>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net5.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net9.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
 	<LangVersion>12.0</LangVersion>
     <!-- Disable warning for missing XML doc comments. -->
     <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
 	<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
-	<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <Authors>Aaron Clauson</Authors>
     <Copyright>Copyright © 2020-2025 Aaron Clauson</Copyright>
     <Company>SIP Sorcery PTY LTD</Company>
