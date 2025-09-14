@@ -23,7 +23,7 @@ namespace SIPSorceryMedia.Abstractions;
 
 public delegate void RawAudioSampleDelegate(AudioSamplingRatesEnum samplingRate, uint durationMilliseconds, short[] sample);
 
-public interface IAudioSource
+public interface IAudioSource: IDisposable
 {
     event EncodedSampleDelegate OnAudioSourceEncodedSample;
 
