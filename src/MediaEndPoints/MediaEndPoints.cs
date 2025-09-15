@@ -15,9 +15,11 @@
 // BDS BY-NC-SA restriction, see included LICENSE.md file.
 //-----------------------------------------------------------------------------
 
+using System;
+
 namespace SIPSorceryMedia.Abstractions;
 
-public delegate void EncodedSampleDelegate(uint durationRtpUnits, byte[] sample);
+public delegate void EncodedSampleDelegate(uint durationRtpUnits, ReadOnlyMemory<byte> sample);
 
 
 public delegate void SourceErrorDelegate(string errorMessage);

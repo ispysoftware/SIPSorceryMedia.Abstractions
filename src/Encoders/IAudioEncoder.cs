@@ -32,7 +32,7 @@ public interface IAudioEncoder: IDisposable
     /// <param name="pcm">An array of 16 bit signed audio samples.</param>
     /// <param name="format">The audio format to encode the PCM sample to.</param>
     /// <returns>A byte array containing the encoded sample.</returns>
-    byte[] EncodeAudio(short[] pcm, AudioFormat format);
+    int EncodeAudio(ReadOnlySpan<short> pcm, Span<byte> destination, AudioFormat format);
 
     /// <summary>
     /// Decodes to 16bit signed PCM samples.

@@ -14,6 +14,7 @@
 // BDS BY-NC-SA restriction, see included LICENSE.md file.
 //-----------------------------------------------------------------------------
 
+using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace SIPSorceryMedia.Abstractions;
 public interface ITextSink
 {
     Task CloseTextSink();
-    void GotTextRtp(IPEndPoint remoteEndPoint, uint ssrc, uint seqnum, uint timestamp, int payloadID, int marker, byte[] payload);
+    void GotTextRtp(IPEndPoint remoteEndPoint, uint ssrc, uint seqnum, uint timestamp, int payloadID, int marker, ReadOnlySpan<byte> payload);
     void SetTextSinkFormat(TextFormat textFormat);
     TextFormat GetTextSinkFormat();
     Task StartTextSink();
