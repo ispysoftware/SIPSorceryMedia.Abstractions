@@ -16,10 +16,11 @@
 //-----------------------------------------------------------------------------
 
 using System;
+using System.Threading.Tasks;
 
 namespace SIPSorceryMedia.Abstractions;
 
-public delegate void EncodedSampleDelegate(uint durationRtpUnits, ReadOnlyMemory<byte> sample);
+public delegate Task EncodedSampleDelegate(uint durationRtpUnits, ReadOnlyMemory<byte> sample);
 
 
 public delegate void SourceErrorDelegate(string errorMessage);
