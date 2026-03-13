@@ -43,6 +43,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="PixelConverter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="" />
 	<None Include="..\README.md" Pack="true" PackagePath="" />
   </ItemGroup>
